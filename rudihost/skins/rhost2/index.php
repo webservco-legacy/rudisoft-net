@@ -1,0 +1,8 @@
+<?php
+/*
+./skins/rhost2/index.php
+13:26 2008-05-18
+*/
+
+require_once './../../lib/404.php';
+?>
