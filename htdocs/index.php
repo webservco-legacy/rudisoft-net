@@ -36,8 +36,8 @@
 <a title="RudiSoft.Net" href="http://rudisoft.net"><img src="rudisoft-net.png" width="80" height="15" border="0" title="RudiSoft.Net" alt="RudiSoft.Net" /></a>
 <a title="RudiSoft Labs" href="http://labs.rudisoft.net"><img src="rudisoft-labs.png" width="80" height="15" border="0" title="RudiSoft Labs" alt="RudiSoft Labs" /></a>
 <a title="phpMovieCollection" href="http://pmc.rudisoft.net"><img src="pmc-movies.png" width="80" height="15" border="0" title="phpMovieCollection" alt="phpMovieCollection" /></a>
-<a title="EvilHosting.Org" href="http://zendfree.com"><img src="zendfree-com.png" width="80" height="15" border="0" title="EvilHosting.Org" alt="EvilHosting.Org" /></a>
-<a title="Basic State" href="http://basicstate.com"><img src="basic-state.png" width="80" height="15" border="0" title="Basic State" alt="Basic State" /></a>
+<a title="EvilHosting.Org" href="http://evilhosting.org"><img src="evil-hosting.png" width="80" height="15" border="0" title="EvilHosting.Org" alt="EvilHosting.Org" /></a>
+<a href="http://host-tracker.com/website-uptime-stats/870203/lvuc/"><img width="80" height="15" border="0" alt="server monitor" src="http://ext.host-tracker.com/uptime-img/?s=15&amp;t=870203&amp;m=00.99&amp;p=Total&amp;src=lvuc" /></a>
 <a title="Valid XHTML 1.0 Transitional" href="http://validator.w3.org/check?uri=referer"><img src="-xhtml1.0.png" width="80" height="15" border="0" title="Valid XHTML 1.0 Transitional" alt="Valid XHTML 1.0 Transitional" /></a>
 <a title="Valid CSS!" href="http://jigsaw.w3.org/css-validator/check/referer"><img src="-css2.1.png" width="80" height="15" border="0" title="Valid CSS!" alt="Valid CSS!" /></a>
 </div>
