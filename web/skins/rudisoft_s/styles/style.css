@@ -1,0 +1,225 @@
+/* ********** ********** ********** ********** ********** LAYOUT START ********** ********** ********** ********** ********** */
+html, body {margin:0; padding:0; border:0; height: 100%;}
+#layout    {position: absolute; left: 50%; top: 50%; width: 980px; height: 582px; margin-left: -485px; margin-top: -291px;}
+#left      {float: left; width: 490px; height: 582px;}
+#right     {float: right; width: 490px; height: 582px;}
+
+#header {width: 100%; height: 80px; clear: both; margin: 0; padding: 0;}
+#logo1 {float: left; width: 105px; height: 80px;}
+#logo2 {float: right; width: 385px; height: 80px;}
+
+#menu1 {width: 100%; height: 144px; clear: both; margin: 0; padding: 0;}
+#mnu1 {float: left; width: 163px; height: 144px; margin: 0; padding: 0;}
+#mnu_1 {width: 103px; height: 70px; margin: 0 auto; margin-top: 6px; padding: 0;}
+#mnu_1 a, #mnu_1 a:link, #mnu_1 a:visited {display: block;}
+#mnu_1 img {width: 100%; height: 100%; border: 0;}
+#mnu_1 a:hover {visibility:visible;}
+#mnu_1 a:hover img {visibility: hidden;}
+#mnu2 {float: left; width: 163px; height: 144px; margin: 0; padding: 0;}
+#mnu_2 {width: 103px; height: 70px; margin: 0 auto; margin-top: 6px; padding: 0;}
+#mnu_2 a, #mnu_2 a:link, #mnu_2 a:visited {display: block;}
+#mnu_2 img {width: 100%; height: 100%; border: 0;}
+#mnu_2 a:hover {visibility:visible;}
+#mnu_2 a:hover img {visibility: hidden;}
+#mnu3 {float: left; width: 163px; height: 144px; margin: 0; padding: 0;}
+#mnu_3 {width: 103px; height: 70px; margin: 0 auto; margin-top: 6px; padding: 0;}
+#mnu_3 a, #mnu_3 a:link, #mnu_3 a:visited {display: block;}
+#mnu_3 img {width: 100%; height: 100%; border: 0;}
+#mnu_3 a:hover {visibility:visible;}
+#mnu_3 a:hover img {visibility: hidden;}
+
+#cnt1 {width: 100%; height: 358px; clear: both; margin: 0; padding: 0;}
+#cnt1_sp1 {width:100%; height: 30px; margin: 0; padding: 0;}
+#cnt1_sp2 {width:100%; height: 10px; margin: 0; padding: 0;}
+#cnt1_left {width: 56px; height: 286px; float: left; margin: 0; padding: 0;}
+#cnt1_content{float: left; width: 378px; height: 286px; margin: 0; padding: 0; overflow: auto;}
+#cnt1_right {width: 56px; height: 286px; float: right; margin: 0; padding: 0;}
+
+#cnt2 {width: 100%; height: 358px; clear: both; margin: 0; padding: 0;}
+#cnt2_sp {width:100%; height: 30px; margin: 0; padding: 0;}
+#cnt2_left {width: 42px; height: 305px; float: left; margin: 0; padding: 0;}
+#cnt2_content{float: left; width: 406px; height: 305px; margin: 0; padding: 0;}
+.picture {display: block;}
+#cnt2_right {width: 42px; height: 305px; float: right; margin: 0; padding: 0;}
+#scroll_sp {width: 100%; height: 244px;}
+
+#menu2 {width: 100%; height: 144px; clear: both; margin: 0; padding: 0;}
+#mnu4 {float: left; width: 163px; height: 144px; margin: 0; padding: 0;}
+#mnu_4 {width: 103px; height: 70px; margin: 0 auto; margin-top: 6px; padding: 0;}
+#mnu_4 a, #mnu_4 a:link, #mnu_4 a:visited {display: block;}
+#mnu_4 img {width: 100%; height: 100%; border: 0;}
+#mnu_4 a:hover {visibility:visible;}
+#mnu_4 a:hover img {visibility: hidden;}
+#mnu5 {float: left; width: 163px; height: 144px; margin: 0; padding: 0;}
+#mnu_5 {width: 103px; height: 70px; margin: 0 auto; margin-top: 6px; padding: 0;}
+#mnu_5 a, #mnu_5 a:link, #mnu_5 a:visited {display: block;}
+#mnu_5 img {width: 100%; height: 100%; border: 0;}
+#mnu_5 a:hover {visibility:visible;}
+#mnu_5 a:hover img {visibility: hidden;}
+#mnu6 {float: left; width: 163px; height: 144px; margin: 0; padding: 0;}
+#mnu_6 {width: 103px; height: 70px; margin: 0 auto; margin-top: 6px; padding: 0;}
+#mnu_6 a, #mnu_6 a:link, #mnu_6 a:visited {display: block;}
+#mnu_6 img {width: 100%; height: 100%; border: 0;}
+#mnu_6 a:hover {visibility:visible;}
+#mnu_6 a:hover img {visibility: hidden;}
+
+#ftr  {width: 100%; height: 80px; clear: both; margin: 0; padding: 0;}
+#ftr1 {width: 100%; height: 20px; clear: both; margin: 0; padding: 0;}
+#ftr2 {width: 100%; height: 30px; clear: both; margin: 0; padding: 0;}
+#ftr3 {width: 100%; height: 30px; clear: both; margin: 0; padding: 0;}
+/* ********** ********** ********** ********** ********** LAYOUT END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** GENERAL START ********** ********** ********** ********** ********** */
+form {display: inline; margin: 0px; padding: 0px;}
+img  {margin: 0px; padding: 0px; border: 0px;}
+h1   {margin: 0px 0px 5px 0px; padding: 0px; font-size: 130%;}
+h2   {margin: 0px; padding: 0px; font-size: 110%;}
+h3   {margin: 0px; padding: 0px; font-size: 100%;}
+h4   {margin: 0px; padding: 0px; font-size: 100%;}
+ul    {padding: 0px; margin: 0px 0px 10px 30px; list-style-type: disc;}
+li    {padding: 5px 0px 0px 5px; margin: 0px 0px 0px 0px;}
+p {padding: 5px 0px 5px 0px; margin: 0px 0px 0px 0px;}
+/* ********** ********** ********** ********** ********** GENERAL END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** LINKS START ********** ********** ********** ********** ********** */
+a:link, a:visited {background: transparent; text-decoration: none; font-weight: bold;}
+a:hover, a:active {background: transparent; text-decoration: none; font-weight: bold;}
+/* ********** ********** ********** ********** ********** LINKS END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** HEADER START ********** ********** ********** ********** ********** */
+.menu {padding: 35px 0px 0px 0px;}
+/* ********** ********** ********** ********** ********** HEADER END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** CONTENT START ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** CONTENT END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** CONTENT BODY START ********** ********** ********** ********** ********** */
+.Bold          {font-weight: bold;}
+.Italic        {font-style: italic;}
+.Underline     {text-decoration: underline;}
+.StrikeThrough {text-decoration: line-through;}
+.Subscript     {vertical-align: sub; font-size: smaller;}
+.Superscript   {vertical-align: super; font-size: smaller;}
+
+.FontColor1 {color: #ff9900;}
+.FontColor2 {color: #0066cc;}
+.FontColor3 {color: #ff0000;}
+.FontColor1BG {background-color: #ff9900;}
+.FontColor2BG {background-color: #0066cc;}
+.FontColor3BG {background-color: #ff0000;}
+
+.FontArial   {font-family: 'Comic Sans MS';}
+.FontVerdana {font-family: 'Comic Sans MS';}
+.FontTimes   {font-family: 'Times New Roman';}
+.FontCourier {font-family: 'Courier New';}
+.FontSmaller {font-size: smaller;}
+.FontLarger  {font-size: larger;}
+.FontSmall   {font-size: 10px;}
+.FontBig     {font-size: 14px;}
+.Indent1 {margin-left: 40px;}
+.Indent2 {margin-left: 80px;}
+.Indent3 {margin-left: 120px;}
+.JustifyLeft {text-align: left;}
+.JustifyRight {text-align: right;}
+.JustifyCenter {text-align: center;}
+.JustifyFull {text-align: justify;}
+
+code
+{
+  font-family: courier, monospace;
+  background-color: #eeeeee;
+  padding-left: 1px;
+  padding-right: 1px;
+  border: #c0c0c0 1px solid;
+}
+kbd
+{
+  padding: 0px 1px 0px 1px;
+  border-width: 1px 2px 2px 1px;
+  border-style: solid;
+}
+blockquote
+{
+  color: #111111;
+}
+/* ********** ********** ********** ********** ********** CONTENT BODY END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** LEFT START ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** LEFT END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** RIGHT START ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** RIGHT END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** FOOTER START ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** FOOTER END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** COLORS START ********** ********** ********** ********** ********** */
+html, body    {background-color: #111111; color: #EEEEEE;}
+#logo2        {background-image: url('../graphics/logo2bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#cnt1         {background-image: url('../graphics/cntbg.png'); background-position: 42px 30px; background-repeat: no-repeat;}
+#cnt2_content {background-image: url('../graphics/cntbg.png'); background-position: top left; background-repeat: no-repeat;}
+#mnu1         {background-image: url('../graphics/mnu1bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#mnu2         {background-image: url('../graphics/mnu2bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#mnu3         {background-image: url('../graphics/mnu3bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#mnu4         {background-image: url('../graphics/mnu4bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#mnu5         {background-image: url('../graphics/mnu5bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#mnu6         {background-image: url('../graphics/mnu6bg.jpg'); background-position: top left; background-repeat: no-repeat;}
+#cnt1_content {background-color: #EEEEEE; color: #111111;}
+#cnt2_content {background-color: #EEEEEE; color: #111111;}
+a:link, a:visited {background-color: #EEEEEE; background: transparent; color: #111111;}
+a:hover, a:active {background-color: #EEEEEE; background: transparent; color: #111111;}
+/* ********** ********** ********** ********** ********** COLORS END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** BORDERS START ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** BORDERS END ********** ********** ********** ********** ********** */
+
+/* ********** ********** ********** ********** ********** FONTS START ********** ********** ********** ********** ********** */
+html, body {font-family: Arial, serif; font-size: 90%; text-align: center;}
+table, input, select {font-family: Arial, serif; font-size: 100%;}
+#cnt1_content {line-height: 150%; text-align: justify;}
+.menu {font-weight: bold; font-size: 110%;}
+#ftr3 {font-size: 80%;}
+#logo1  {text-align:right;}
+#logo2  {text-align:left;}
+/* ********** ********** ********** ********** ********** FONTS END ********** ********** ********** ********** ********** */
+
+
+/* ********** ********** ********** ********** ********** COLORS TEST ********** ********** ********** ********** ********** */
+/*
+#layout {background-color: #EEEEEE;}
+#left   {background-color: #cccccc;}
+#right  {background-color: #333333;}
+
+#header {background-color: #ffcc66;}
+#logo1  {background-color: #ff6666;}
+#logo2  {background-color: #66cc66;}
+
+#menu1 {background-color: #222222;}
+#mnu1 {background-color: #333333;}
+#mnu2 {background-color: #444444;}
+#mnu3 {background-color: #555555;}
+
+#cnt1 {background-color: #990000;}
+#cnt1_sp1 {background-color: #666666;}
+#cnt1_sp2 {background-color: #333333;}
+#cnt1_left {background-color: #009900;}
+#cnt1_content {background-color: #111111;}
+#cnt1_right {background-color: #009900;}
+
+
+#cnt2 {background-color: #990000;}
+#cnt2_sp {background-color: #666666;}
+#cnt2_left {background-color: #003300;}
+#cnt2_content {background-color: #111111;}
+#cnt2_right {background-color: #003300;}
+
+#menu2 {background-color: #222222;}
+#mnu4 {background-color: #333333;}
+#mnu5 {background-color: #444444;}
+#mnu6 {background-color: #555555;}
+
+#ftr {background-color: #003300;}
+#ftr1 {background-color: #006600;}
+#ftr2 {background-color: #009900;}
+*/
