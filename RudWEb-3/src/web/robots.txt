@@ -1,0 +1,14 @@
+User-Agent: *
+Allow: /
+Disallow: /3rdparty/
+Disallow: /cfg/
+Disallow: /ext/
+Disallow: /inc/
+Disallow: /intl/
+Disallow: /mod/
+Disallow: /rwlib/
+Disallow: /skins/
+Disallow: /stats/
+Disallow: /var/
+
+Sitemap: http://www.rudisoft.net/sitemap.xml
