@@ -1,9 +1,16 @@
 <?php
 error_reporting (E_ALL | E_STRICT);
 
+/*
 $cfg = array(
 	'site_path' => '/home/rudisoft/www/public_html/sandbox/radio/',
 	'site_url' => 'http://rudisoft.dev/sandbox/radio/',
+);
+*/
+
+$cfg = array(
+	'site_path' => '/var/www/radio.rudisoft.net/web/',
+	'site_url' => 'http://radio.rudisoft.net/',
 );
 
 $pages = array(
