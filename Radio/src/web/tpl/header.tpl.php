@@ -1,11 +1,33 @@
+<?php
+/**
+ * $Id$
+ *
+ * Template file.
+ *
+ * @author     Radu Maier <rudisoft@rudisoft.net>
+ * @copyright  Copyright (c) 2008 - 2010, RudiSoft.Net
+ * @license    http://www.opensource.org/licenses/bsd-license.php
+ */
+
+/**
+ * Security check.
+ */
+if ( !defined( '_RUDWEB' ) )
+{
+	/**
+	 * Stop script execution.
+	 */
+	exit;
+}
+?>
 				<div class="row-1">
-					<div class="indent"><a href="home.html"><img alt="" src="img/logo.jpg" /></a><img alt="" src="img/slogan.jpg" /></div>
+					<div class="indent"><a class="page_home" href="<?php echo $cfg->url->app; ?>"><img alt="" src="img/logo.jpg" /></a><img alt="" src="img/slogan.jpg" /></div>
 				</div>
 				<div class="row-2">
 					<ul class="nav">
-						<li><a id="nav_home" title="Home" href="<?php echo $cfg['site_url']; ?>" class="first">Home</a></li>
-						<li><a id="nav_playlist" title="Playlist" href="<?php echo $cfg['site_url']; ?>?page=playlist">Playlist</a></li>
-						<li><a id="nav_rudisoft" title="" href="http://www.rudisoft.net">Rudisoft.Net</a></li>
+					<?php foreach ( $pages as $nav_page => $nav_data ) { ?>
+						<li><a class="<?php echo $nav_data['class']; ?>" title="<?php echo $nav_data['name']; ?>" href="<?php echo $nav_data['url']; ?>"><?php echo $nav_data['name']; ?></a></li>
+					<?php } ?>
 					</ul>
 					<!-- 
 					<ul class="extra-nav">
@@ -17,5 +39,5 @@
 				</div>
 				<div class="row-3">
 					<div class="extra-slogan"><img alt="" src="img/extra-slogan.jpg" /></div>
-					<?php require $cfg['site_path'] . 'tpl/player.tpl.php'; ?>
+					<?php require $cfg->path->app . 'tpl/player.tpl.php'; ?>
 				</div>

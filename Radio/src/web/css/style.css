@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/**
+ * $Id$
+ *
+ * CSS file.
+ *
+ * @author     Radu Maier <rudisoft@rudisoft.net>
+ * @copyright  Copyright (c) 2008 - 2010, RudiSoft.Net
+ * @license    http://www.opensource.org/licenses/bsd-license.php
+ */
 * {margin:0;padding:0}
 html, body {height:100%}
 html {min-width:920px}

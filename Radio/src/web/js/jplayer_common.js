@@ -1,3 +1,12 @@
+/**
+ * $Id$
+ *
+ * JavaScript file.
+ *
+ * @author     Radu Maier <rudisoft@rudisoft.net>
+ * @copyright  Copyright (c) 2008 - 2010, RudiSoft.Net
+ * @license    http://www.opensource.org/licenses/bsd-license.php
+ */
 function demoInstanceInfo(myPlayer, myInfo) {
 	var jPlayerInfo = "<p>This jPlayer instance is running in your browser using ";
 

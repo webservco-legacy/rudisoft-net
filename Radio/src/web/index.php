@@ -15,7 +15,25 @@
  * @filesource
  */
 
-require_once './cfg.php';
+/**
+ * Security token.
+ */
+define( '_RUDWEB', TRUE );
 
-require $cfg[$env]['site_path'] . 'tpl/layout.tpl.php';
+/**
+ * Load configuration.
+ */
+require_once './cfg.inc.php';
+
+/**
+ * Load application.
+ */
+require_once $cfg->path->app . 'app.inc.php';
+
+/**
+ * Load controller.
+ */
+require_once $cfg->path->app . 'ctrl.inc.php';
+
+exit;
 ?>

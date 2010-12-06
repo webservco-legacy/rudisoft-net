@@ -1,0 +1,35 @@
+<?php
+/**
+ * $Id$
+ *
+ * Template file.
+ *
+ * @author     Radu Maier <rudisoft@rudisoft.net>
+ * @copyright  Copyright (c) 2008 - 2010, RudiSoft.Net
+ * @license    http://www.opensource.org/licenses/bsd-license.php
+ */
+
+/**
+ * Security check.
+ */
+if ( !defined( '_RUDWEB' ) )
+{
+	/**
+	 * Stop script execution.
+	 */
+	exit;
+}
+?>
+		<script type="text/javascript">	
+		//<![CDATA[
+		
+		$(document).ready(function() {
+
+			/* load link with class "new" in a new window */
+			$('.new').click(function(event){
+			    $(this).attr('target','_blank');
+			  });
+
+		});
+		//]]>
+		</script>

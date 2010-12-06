@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id$ -->
+
+<config>
+	<env>prod</env>
+	<dev>
+		<path>
+			<core>/home/rudisoft/www/public_html/sandbox/radio/</core>
+			<app>/home/rudisoft/www/public_html/sandbox/radio/</app>
+			<www>/home/rudisoft/www/public_html/sandbox/radio/</www>
+		</path>
+		<url>
+			<app>http://rudisoft.dev/sandbox/radio/</app>
+		</url>
+		<app>
+			<errors>E_ALL | E_STRICT</errors>
+			<index>home</index>
+		</app>
+		<radio>
+			<server>http://radio.rudisoft.net:1984</server>
+			<mount>/stream</mount>
+			<m3u>/stream.m3u</m3u>
+		</radio>
+	</dev>
+	<test></test>
+	<prod>
+		<path>
+			<core>/home/rudisoft/www/public_html/sandbox/radio/</core>
+			<app>/home/rudisoft/www/public_html/sandbox/radio/</app>
+			<www>/home/rudisoft/www/public_html/sandbox/radio/</www>
+		</path>
+		<url>
+			<app>http://rudisoft.dev/sandbox/radio/</app>
+		</url>
+		<app>
+			<errors>0</errors>
+			<index>home</index>
+		</app>
+		<radio>
+			<server>http://radio.rudisoft.net:1984</server>
+			<mount>/stream</mount>
+			<m3u>/stream.m3u</m3u>
+		</radio>
+	</prod>
+</config>

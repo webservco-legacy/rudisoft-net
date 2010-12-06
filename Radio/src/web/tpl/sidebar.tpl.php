@@ -1,3 +1,25 @@
+<?php
+/**
+ * $Id$
+ *
+ * Template file.
+ *
+ * @author     Radu Maier <rudisoft@rudisoft.net>
+ * @copyright  Copyright (c) 2008 - 2010, RudiSoft.Net
+ * @license    http://www.opensource.org/licenses/bsd-license.php
+ */
+
+/**
+ * Security check.
+ */
+if ( !defined( '_RUDWEB' ) )
+{
+	/**
+	 * Stop script execution.
+	 */
+	exit;
+}
+?>						
 						<!-- box1 begin -->
 						<div class="box1">
 							<div class="inner">
