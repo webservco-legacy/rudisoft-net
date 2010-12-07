@@ -2,7 +2,7 @@
 <!-- $Id$ -->
 
 <config>
-	<env>dev</env>
+	<env>prod</env>
 	<dev>
 		<path>
 			<core>/home/rudisoft/www/public_html/sandbox/radio/</core>
