@@ -44,7 +44,7 @@ if ( isset( $_POST['request'] ) )
 			{
 				$page = ( array_key_exists( $_POST['page'], $pages ) ) ? $_POST['page'] : '404';
 				require $cfg->path->app . 'tpl/page_' . $page . '.tpl.php';
-				require_once $cfg->path->app . 'tpl/ajax.tpl.php';
+				require $cfg->path->app . 'tpl/jscript.tpl.php';
 				exit();
 			}
 			break;
