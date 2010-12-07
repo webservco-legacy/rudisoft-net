@@ -26,7 +26,10 @@ if ( !defined( '_RUDWEB' ) )
 				<div class="row-2">
 					<ul class="nav">
 					<?php foreach ( $pages as $nav_page => $nav_data ) { ?>
-						<li><a class="<?php echo $nav_data['class']; ?>" title="<?php echo $nav_data['name']; ?>" href="<?php echo $nav_data['url']; ?>"><?php echo $nav_data['name']; ?></a></li>
+					<?php if ( FALSE !== $nav_data['menu'] ) { ?>
+						<?php $extra_class = ( 'home' == $nav_page ) ? ' first' : ''; ?>
+						<li><a class="<?php echo $nav_data['class']; ?><?php echo $extra_class; ?>" title="<?php echo $nav_data['name']; ?>" href="<?php echo $nav_data['url']; ?>"><?php echo $nav_data['name']; ?></a></li>
+					<?php } ?>
 					<?php } ?>
 					</ul>
 					<!-- 

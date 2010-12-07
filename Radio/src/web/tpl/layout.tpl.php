@@ -27,6 +27,9 @@ if ( !defined( '_RUDWEB' ) )
 	</head>
 	
 	<body id="page1">
+		<div id="noscript">
+		'Tis the season to enable JavaScript in your browser!
+		</div>
 		<div id="main">
 			<!-- header -->
 			<div id="header">
@@ -36,9 +39,11 @@ if ( !defined( '_RUDWEB' ) )
 			<div id="content">
 				<div class="wrapper">
 					<div class="mainContent" id="ajax_content">
-						<?php //require $cfg->path->app . 'tpl/' .  $out['page_template'] . '.tpl.php'; ?>
-						
-						
+						<div class="indent">
+							<div class="section">
+								<?php require $cfg->path->app . 'tpl/page_' .  $page . '.tpl.php'; ?>
+							</div>
+						</div>
 					</div>
 					
 					<div class="aside">
@@ -65,6 +70,9 @@ if ( !defined( '_RUDWEB' ) )
 		Cufon.now();
 
 		$(document).ready(function() {
+
+			$("#noscript").hide();
+			
 			// Local copy of jQuery selectors, for performance.
 			var jpPlayTime = $("#jplayer_play_time");
 			var jpTotalTime = $("#jplayer_total_time");
@@ -112,19 +120,14 @@ if ( !defined( '_RUDWEB' ) )
 				return false;
 			});
 
-			<?php /* XXX MAKE THE FOLOWING DINAMYC */ ?>
-
-			/* ajax navigation - home page */
-			$('.page_home').click(function(event){
+			<?php foreach ( $pages as $nav_page => $nav_data ) { ?>
+			<?php if ( 'new' != $nav_data['class'] ) { ?>
+			$('.<?php echo $nav_data['class']; ?>').click(function(event){
 			    event.preventDefault();
-			    $.loadContent( '<?php echo $cfg->app->index; ?>' );
-			  });
-
-			/* ajax navigation - playlist page */
-			$('.page_playlist').click(function(event){
-			    event.preventDefault();
-			    $.loadContent( 'playlist' );
-			  });
+			    $.loadContent( '<?php echo $nav_page; ?>' );
+			});
+			<?php } ?>
+			<?php } ?>
 
 			/* load link with class "new" in a new window */
 			$('.new').click(function(event){

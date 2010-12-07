@@ -31,7 +31,26 @@ if ( !defined( '_RUDWEB' ) )
  *
  * @var string
  */
-$page = ( isset( $_GET['page'] ) && ( array_key_exists( $_GET['page'], $pages ) ) ) ? $_GET['page'] : (string) $cfg->app->index;
+$page = (string) $cfg->app->index;
+
+if ( isset( $_GET['page'] ) )
+{
+	/**
+	 * @var string
+	 */
+	$page = ( array_key_exists( $_GET['page'], $pages ) ) ? $_GET['page'] : '404';
+}
+
+/**
+ * If template file for page is not present we use 404.
+ */
+if ( !is_readable( $cfg->path->app . 'tpl/page_' .  $page . '.tpl.php' ) )
+{
+	/**
+	 * @var string
+	 */
+	$page = '404';
+}
 
 /**
  * Output data.

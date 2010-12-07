@@ -40,11 +40,10 @@ if ( isset( $_POST['request'] ) )
 	switch( $_POST['request'] )
 	{
 		case 'page' :
-
-
-			if ( isset( $_POST['page'] ) && ( array_key_exists( $_POST['page'], $pages ) ) )
+			if ( isset( $_POST['page'] ) )
 			{
-				require $cfg->path->app . 'tpl/' . $_POST['page'] . '.tpl.php';
+				$page = ( array_key_exists( $_POST['page'], $pages ) ) ? $_POST['page'] : '404';
+				require $cfg->path->app . 'tpl/page_' . $page . '.tpl.php';
 				require_once $cfg->path->app . 'tpl/ajax.tpl.php';
 				exit();
 			}

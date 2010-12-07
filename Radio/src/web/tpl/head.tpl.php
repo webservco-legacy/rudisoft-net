@@ -20,7 +20,7 @@ if ( !defined( '_RUDWEB' ) )
 	exit;
 }
 ?>
-		<title><?php echo $out['page_title']; ?> .:. RudiSoft.Net Radio</title>
+		<title>RudiSoft.Net Radio</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link href="<?php echo $cfg->url->app; ?>css/style.css" rel="stylesheet" type="text/css" media="screen" />
 		<link href="<?php echo $cfg->url->app; ?>css/jplayer.rudisoft.xmas.css" rel="stylesheet" type="text/css" media="screen" />

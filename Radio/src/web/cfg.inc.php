@@ -47,9 +47,16 @@ $env = ($settings->env) ? trim( $settings->env ) : 'dev';
 $cfg = $settings->$env;
 
 /**
- * Set error reporting
+ * Set error reporting.
  */
-error_reporting ( (string) $cfg->app->errors );
+if ( '1' == (string) $cfg->app->errors )
+{
+	error_reporting( E_ALL | E_STRICT );
+}
+else
+{
+	error_reporting( 0 );
+}
 
 /**
  * List of all pages.
@@ -58,25 +65,30 @@ error_reporting ( (string) $cfg->app->errors );
  */
 $pages = array(
 	'home' => array(
+		'menu' => TRUE,
 		'name' => 'Home',
-		'url' => (string) $cfg->url->app . (string) $cfg->app->index,
-		'class' => 'page_home first',
+		'url' => (string) $cfg->url->app . '?page=' . (string) $cfg->app->index,
+		'class' => 'page_home',
 	),
-	'playlist' => array(
-		'name' => 'Playlist',
-		'url' => (string) $cfg->url->app . '?page=playlist',
-		'class' => 'page_playlist',
-	),
-	'issues' => array(
-		'name' => 'Known Issues',
-		'url' => (string) $cfg->url->app . '?page=issues',
-		'class' => 'page_issues',
+	'programmes' => array(
+		'menu' => TRUE,
+		'name' => 'Programmes',
+		'url' => (string) $cfg->url->app . '?page=programmes',
+		'class' => 'page_programmes',
 	),
 	'rudisoft' => array(
+		'menu' => TRUE,
 		'name' => 'RudiSoft.Net',
 		'url' => 'http://www.rudisoft.net',
 		'class' => 'new',
 	),
+	'404' => array(
+		'menu' => FALSE,
+		'name' => '404 Not Found',
+		'url' => (string) $cfg->url->app . '?page=404',
+		'class' => 'page_404',
+	),
+	
 );
 
 /**

@@ -20,9 +20,5 @@ if ( !defined( '_RUDWEB' ) )
 	exit;
 }
 ?>
-					<div class="indent">
-							<div class="section">
-								<h2>Playlist</h2>
-								<p>Coming soon...</p> 
-							</div>
-						</div>
+								<h2>Four Oh Four!</h2>
+								<p>We are terribly sorry, but Santa's little helpers couldn't find whatever it is you were looking for...</p>

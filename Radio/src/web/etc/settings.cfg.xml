@@ -13,7 +13,7 @@
 			<app>http://rudisoft.dev/sandbox/radio/</app>
 		</url>
 		<app>
-			<errors>E_ALL | E_STRICT</errors>
+			<errors>1</errors>
 			<index>home</index>
 		</app>
 		<radio>
