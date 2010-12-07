@@ -36,7 +36,8 @@ function demoInstanceInfo(myPlayer, myInfo) {
 function demoStatusInfo(myPlayer, myInfo) {
 	var jPlayerStatus = "<p>jPlayer is ";
 	jPlayerStatus += (myPlayer.jPlayer("getData", "diag.isPlaying") ? "playing" : "stopped");
-	jPlayerStatus += " at time: " + Math.floor(myPlayer.jPlayer("getData", "diag.playedTime")) + "ms.";
+	//jPlayerStatus += " at time: " + Math.floor(myPlayer.jPlayer("getData", "diag.playedTime")) + "ms.";
+	jPlayerStatus += " at time: " + (myPlayer.jPlayer("getData", "diag.playedTime")) + "ms.";
 	jPlayerStatus += " (tt: " + Math.floor(myPlayer.jPlayer("getData", "diag.totalTime")) + "ms";
 	jPlayerStatus += ", lp: " + Math.floor(myPlayer.jPlayer("getData", "diag.loadPercent")) + "%";
 	jPlayerStatus += ", ppr: " + Math.floor(myPlayer.jPlayer("getData", "diag.playedPercentRelative")) + "%";

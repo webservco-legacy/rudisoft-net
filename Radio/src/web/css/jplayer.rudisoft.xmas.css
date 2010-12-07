@@ -71,7 +71,7 @@ a.jp-pause {
 }
 div.jp-single-player a.jp-play,
 div.jp-single-player a.jp-pause {
-	left:70px; /* 40 */
+	left:60px; /* 40 */
 }
 div.jp-playlist-player a.jp-play,
 div.jp-playlist-player a.jp-pause {
@@ -97,7 +97,7 @@ a.jp-stop {
 	height:28px;
 }
 div.jp-single-player a.jp-stop {
-	left:90px;
+	left:104px; /* 90 */
 }
 div.jp-playlist-player a.jp-stop {
 	left:126px;
@@ -157,7 +157,7 @@ a.jp-volume-min {
 	height:15px;
 }
 div.jp-single-player a.jp-volume-min {
-	left:164px; /* 274 */
+	left:184px; /* 274 */
 }
 div.jp-playlist-player a.jp-volume-min {
 	left:196px; /* 296 */
@@ -172,7 +172,7 @@ a.jp-volume-max {
 	height:15px;
 }
 div.jp-single-player a.jp-volume-max {
-	left:246px; /* 346 */
+	left:256px; /* 346 */
 }
 div.jp-playlist-player a.jp-volume-max {
 	left:268px; /* 368 */
@@ -191,7 +191,7 @@ div.jp-volume-bar {
 	cursor: pointer;
 }
 div.jp-single-player div.jp-volume-bar {
-	left:192px; /* 292 */
+	left:202px; /* 292 */
 }
 div.jp-playlist-player div.jp-volume-bar {
 	left:214px; /* 314 */
@@ -214,7 +214,7 @@ div.jp-total-time {
 }
 div.jp-single-player div.jp-play-time,
 div.jp-single-player div.jp-total-time {
-	left:120px; /* 130 */
+	left:142px; /* 130 */
 	width: 42px;
 }
 div.jp-playlist-player div.jp-play-time,
@@ -260,4 +260,17 @@ div.jp-playlist-player div.jp-playlist a:hover {
 }
 div.jp-playlist-player div.jp-playlist a.jplayer_playlist_current {
 	color:#0d88c1;
+}
+
+div.jp-loading {
+	background: url("../img/ajax-loader.gif") 0 0 no-repeat;
+	font-size: 12px;
+	position: absolute;
+	width: 140px;
+	left: 130px;
+	top: 44px;
+}
+
+div.jp-loading strong {
+	padding: 0 0 0 24px;
 }

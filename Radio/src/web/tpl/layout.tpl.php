@@ -37,11 +37,22 @@ if ( !defined( '_RUDWEB' ) )
 				<div class="wrapper">
 					<div class="mainContent" id="ajax_content">
 						<?php //require $cfg->path->app . 'tpl/' .  $out['page_template'] . '.tpl.php'; ?>
+						
+						
 					</div>
+					
 					<div class="aside">
 						<?php require $cfg->path->app . 'tpl/sidebar.tpl.php'; ?>
 					</div>
 				</div>
+				
+				<?php if ( isset( $_GET['debug'] ) ) { ?>
+				<div class="section demo_section_bot"> 
+					<div id="demo_status"></div> 
+					<div id="demo_info"></div> 
+				</div>
+				<?php } ?>
+				
 			</div>
 			<!-- footer -->
 			<div id="footer">
@@ -54,29 +65,51 @@ if ( !defined( '_RUDWEB' ) )
 		Cufon.now();
 
 		$(document).ready(function() {
-
 			// Local copy of jQuery selectors, for performance.
 			var jpPlayTime = $("#jplayer_play_time");
 			var jpTotalTime = $("#jplayer_total_time");
 			var jpStatus = $("#demo_status"); // For displaying information about jPlayer's status in the demo page
-		 
+
 			$("#jquery_jplayer").jPlayer({
 				ready: function () {
 					var stream_url = '<?php echo $cfg->radio->server . $cfg->radio->mount; ?>';
-					this.element.jPlayer("setFile", stream_url, stream_url).jPlayer("play");
-					demoInstanceInfo(this.element, $("#demo_info")); // This displays information about jPlayer's configuration in the demo page
+					this.element.jPlayer("setFile", stream_url).jPlayer("play");
+					//demoInstanceInfo(this.element, $("#demo_info")); // This displays information about jPlayer's configuration in the demo page
 				},
+				volume: 30,
 				nativeSupport: false,
 				swfPath: 'swf'
 			})
 			.jPlayer("onProgressChange", function(loadPercent, playedPercentRelative, playedPercentAbsolute, playedTime, totalTime) {
 				jpPlayTime.text($.jPlayer.convertTime(playedTime));
 				jpTotalTime.text($.jPlayer.convertTime(totalTime));
-		 
+
+				if ( this.element.jPlayer("getData", "diag.isPlaying") && this.element.jPlayer("getData", "diag.playedTime") ) {
+					$("#jplayer_loading").hide();
+				}
+
 				demoStatusInfo(this.element, jpStatus); // This displays information about jPlayer's status in the demo page
 			})
 			.jPlayer("onSoundComplete", function() {
 				this.element.jPlayer("play");
+			});
+
+			$("#jplayer_stop").click(function() {
+				$("#jquery_jplayer").jPlayer("stop");
+				$("#jplayer_loading").hide();
+				return false;
+			});
+			
+			$("#jplayer_pause").click(function() {
+				$("#jquery_jplayer").jPlayer("pause");
+				$("#jplayer_loading").hide();
+				return false;
+			});
+
+			$("#jplayer_play").click(function() {
+				$("#jquery_jplayer").jPlayer("play");
+				$("#jplayer_loading").show();
+				return false;
 			});
 
 			<?php /* XXX MAKE THE FOLOWING DINAMYC */ ?>

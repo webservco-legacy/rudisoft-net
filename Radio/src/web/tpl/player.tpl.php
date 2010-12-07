@@ -29,6 +29,7 @@ if ( !defined( '_RUDWEB' ) )
 								<ul class="jp-controls">
 									<li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li> 
 									<li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
+									<li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>
 									<li><a href="#" id="jplayer_volume_min" class="jp-volume-min" tabindex="1">min volume</a></li> 
 									<li><a href="#" id="jplayer_volume_max" class="jp-volume-max" tabindex="1">max volume</a></li>
 								</ul>
@@ -36,6 +37,7 @@ if ( !defined( '_RUDWEB' ) )
 									<div id="jplayer_volume_bar_value" class="jp-volume-bar-value"></div> 
 								</div> 
 								<div id="jplayer_play_time" class="jp-play-time"></div>
+								<div id="jplayer_loading" class="jp-loading"><strong>Loading...</strong></div>
 							</div>
 						</div>
 					</div>
