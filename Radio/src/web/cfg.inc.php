@@ -76,12 +76,6 @@ $pages = array(
 		'url' => (string) $cfg->url->app . '?page=programmes',
 		'class' => 'page_programmes',
 	),
-	'rudisoft' => array(
-		'menu' => TRUE,
-		'name' => 'RudiSoft.Net',
-		'url' => 'http://www.rudisoft.net',
-		'class' => 'new',
-	),
 	'404' => array(
 		'menu' => FALSE,
 		'name' => '404 Not Found',
