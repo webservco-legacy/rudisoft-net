@@ -22,6 +22,7 @@ if ( !defined( '_RUDWEB' ) )
 ?>
 								<h2>Welcome to RudiSoft Radio!</h2>
 								<p>Broadcasting non stop winter holiday tunes all December!</p>
+								<p>Current programme: <a title="Winter Wonderland" class="page_programmes" href="<?php echo $cfg->url->app; ?>?page=programmes"><strong>Winter Wonderland</strong></a></p>
 								<ul class="img-list">
 									<li>
 										<a class="new" title="Listen in your favorite player" href="<?php echo $cfg->radio->server . $cfg->radio->m3u; ?>"><img alt="Listen in your favorite player" title="Listen in your favorite player" src="./img/m3u.png" /></a>

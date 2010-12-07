@@ -30,6 +30,31 @@ if ( !defined( '_RUDWEB' ) )
 			    $(this).attr('target','_blank');
 			  });
 
+			<?php foreach ( $pages as $nav_page => $nav_data ) { ?>
+			<?php if ( 'new' != $nav_data['class'] ) { ?>
+			$('.<?php echo $nav_data['class']; ?>').click(function(event){
+			    event.preventDefault();
+			    $.loadContent( '<?php echo $nav_page; ?>' );
+			});
+			<?php } ?>
+			<?php } ?>
+
+			/* ajax navigation function */
+			$.loadContent = function( page ) {
+				$.ajax({
+		            type: "POST",
+		            url: "<?php echo $cfg->url->app; ?>ajax.php",
+		            data : {'request': 'page', 'page': page},
+		            dataType: "html",
+		            error: function(){
+		            	$('#ajax_content').html('Error');
+		          	},
+		          	success: function(data){
+		        	  $('#ajax_content').html(data);
+		      	  	}
+		      	});
+			};
+
 		});
 		//]]>
 		</script>

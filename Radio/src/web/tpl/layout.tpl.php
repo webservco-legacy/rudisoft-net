@@ -134,7 +134,7 @@ if ( !defined( '_RUDWEB' ) )
 			    $(this).attr('target','_blank');
 			  });
 
-			/* ajax navigationfunction */
+			/* ajax navigation function */
 			$.loadContent = function( page ) {
 				$.ajax({
 		            type: "POST",
