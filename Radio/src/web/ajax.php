@@ -48,6 +48,24 @@ if ( isset( $_POST['request'] ) )
 				exit();
 			}
 			break;
+				
+		case 'iceget' :
+			$iceget_types = array( 'small', 'full' );
+			
+			if ( isset( $_POST['type'] ) )
+			{
+				$type = ( in_array( $_POST['type'], $iceget_types ) ) ? $_POST['type'] : 'full';
+
+				$f = 'iceget_'.$type;
+
+				require $cfg->path->app . 'lib/iceget.lib.php';
+				$iceget = new Iceget();
+				$iceget->SetUrl( 'http://radio.rudisoft.net:1984/stats.xsl' );
+				$stats = $iceget->GetStats( '/stream' );
+
+				return $f( $stats );
+			}
+			break;
 
 		default:
 			echo 0;
@@ -56,6 +74,16 @@ if ( isset( $_POST['request'] ) )
 }
 
 echo 0;
+
+function iceget_small( $stats )
+{
+	$onair = ( 'on' == $stats['onair'] ) ? 'broadcasting' : 'not broadcasting';
+	$out = '
+	server status: <span class="' . $stats['onair'] . '">' . $onair . '</span>
+	<h5>current song:</h5><span class="song">' . $stats['title'] . '</span>
+	';
+	echo $out;
+}
 
 exit;
 ?>

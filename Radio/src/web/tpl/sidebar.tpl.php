@@ -20,7 +20,17 @@ if ( !defined( '_RUDWEB' ) )
 	exit;
 }
 ?>						
-						<!-- box1 begin -->
+						<div class="box2">
+							<div class="inner">
+								<h3>RADIO STATUS</h3>
+								<div id="radio_status">
+								server status: <span>n/a</span>
+								<h5>current song:</h5>n/a
+								</div>
+								<a class="radio_status_refresh" href="<?php echo $cfg->url->app; ?>">click to refresh status</a>
+							</div>
+						</div>
+						
 						<div class="box1">
 							<div class="inner">
 								<h3>News</h3>
@@ -32,14 +42,3 @@ if ( !defined( '_RUDWEB' ) )
 								</dl>
 							</div>
 						</div>
-						<!-- box1 end -->
-						<!-- box2 begin -->
-						<!--
-						<div class="box2">
-							<div class="inner">
-								<h3>Lorem Ipsum</h3>
-								<p>Dolor sit amet</p>
-							</div>
-						</div>
-						-->
-						<!-- box2 end -->

@@ -51,7 +51,7 @@ a:hover {text-decoration:none}
 .red {color:#d52d00;}
 h2, h3, h4 {font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;line-height:1.2em;color:#31a0e8;text-transform:uppercase}
 h2 {font-size:30px;font-weight:300;letter-spacing:-1px;margin-bottom:19px}
-h3 {font-size:22px;margin-bottom:14px;font-weight:300;padding-left:8px;letter-spacing:-1px}
+h3 {font-size:22px;margin-bottom:14px;font-weight:300;padding-left:0px;letter-spacing:-1px}
 h4 {font-size:18px;font-weight:normal;margin-bottom:14px}
 h5 {font-size:1em;padding-top:3px}
 h5 a {text-decoration:none}
@@ -133,3 +133,7 @@ dl dd {padding:4px 0 18px 8px}
 	width: 100%;
 	z-index: 1;
 }
+
+.on { color: #090; font-weight: bold; }
+.off { color: #bbb; font-weight: bold; }
+.song { font-size: 11px; }

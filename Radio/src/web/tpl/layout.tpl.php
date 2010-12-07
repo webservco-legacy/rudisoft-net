@@ -150,8 +150,33 @@ if ( !defined( '_RUDWEB' ) )
 		      	});
 			};
 
+			/* ajax status update function */
+			$.updateStatus = function() {
+				$.ajax({
+		            type: "POST",
+		            url: "<?php echo $cfg->url->app; ?>ajax.php",
+		            data : {'request': 'iceget', 'type': 'small'},
+		            dataType: "html",
+		            error: function(){
+		            	$('#radio_status').html('Error');
+		          	},
+		          	success: function(data){
+		        	  $('#radio_status').html(data);
+		      	  	}
+		      	});
+			};
+
+			/* special update status link */
+			$('.radio_status_refresh').click(function(event){
+			    event.preventDefault();
+			    $.updateStatus();
+			});
+
 			/* ajax navigation - load homepage as default */
 			$.loadContent( '<?php echo $cfg->app->index; ?>' );
+
+			/* ajax - update radio status */
+			$.updateStatus();
 		});
 		//]]>
 		</script>
