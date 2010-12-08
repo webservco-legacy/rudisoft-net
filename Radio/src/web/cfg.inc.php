@@ -76,6 +76,12 @@ $pages = array(
 		'url' => (string) $cfg->url->app . '?page=programmes',
 		'class' => 'page_programmes',
 	),
+	'stats' => array(
+		'menu' => TRUE,
+		'name' => 'Live Stats',
+		'url' => (string) $cfg->url->app . '?page=stats',
+		'class' => 'page_stats',
+	),
 	'404' => array(
 		'menu' => FALSE,
 		'name' => '404 Not Found',

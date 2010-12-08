@@ -25,7 +25,7 @@ if ( !defined( '_RUDWEB' ) )
 								<h3>RADIO STATUS</h3>
 								<div id="radio_status">
 								server status: <span>n/a</span>
-								<h5>current song:</h5>n/a
+								<h5>now playing:</h5>n/a
 								</div>
 								<a class="radio_status_refresh" href="<?php echo $cfg->url->app; ?>">click to refresh status</a>
 							</div>

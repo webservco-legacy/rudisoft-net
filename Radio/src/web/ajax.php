@@ -80,7 +80,25 @@ function iceget_small( $stats )
 	$onair = ( 'on' == $stats['onair'] ) ? 'broadcasting' : 'not broadcasting';
 	$out = '
 	server status: <span class="' . $stats['onair'] . '">' . $onair . '</span>
-	<h5>current song:</h5><span class="song">' . $stats['title'] . '</span>
+	<h5>now playing:</h5><span class="song">' . $stats['title'] . '</span>
+	';
+	echo $out;
+}
+
+function iceget_full( $stats )
+{
+	$onair = ( 'on' == $stats['onair'] ) ? 'broadcasting' : 'not broadcasting';
+	$out = '
+	<li><span class="red">station status:</span> <span class="' . $stats['onair'] . '">' . $onair . '</span></li>
+	<li><span class="red">last initialization:</span> ' . $stats['since'] . '</li>
+	<li><span class="red">station name:</span> ' . $stats['name'] . '</li>
+	<li><span class="red">station description:</span> ' . $stats['description'] . '</li>
+	<li><span class="red">station genre:</span> ' . $stats['genre'] . '</li>
+	<li><span class="red">stream type:</span> ' . $stats['type'] . '</li>
+	<li><span class="red">stream quality:</span> ' . $stats['bitrate'] . '</li>
+	<li><span class="red">current listeners:</span> ' . $stats['listeners'] . '</li>
+	<li><span class="red">most listeners:</span> ' . $stats['peak'] . '</li>
+	<li><span class="red">now playing:</span> ' . $stats['title'] . '</li>
 	';
 	echo $out;
 }

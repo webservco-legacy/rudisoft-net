@@ -73,10 +73,32 @@ if ( !defined( '_RUDWEB' ) )
 		      	});
 			};
 
+			/* ajax status update function */
+			$.updateFullStatus = function() {
+				$.ajax({
+		            type: "POST",
+		            url: "<?php echo $cfg->url->app; ?>ajax.php",
+		            data : {'request': 'iceget', 'type': 'full'},
+		            dataType: "html",
+		            error: function(){
+		            	$('#radio_stats').html('Error');
+		          	},
+		          	success: function(data){
+		        	  $('#radio_stats').html(data);
+		      	  	}
+		      	});
+			};
+
 			/* special update status link */
 			$('.radio_status_refresh').click(function(event){
 			    event.preventDefault();
 			    $.updateStatus();
+			});
+
+			/* special full update status link */
+			$('.radio_stats_refresh').click(function(event){
+			    event.preventDefault();
+			    $.updateFullStatus();
 			});
 
 		});
