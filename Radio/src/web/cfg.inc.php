@@ -95,3 +95,10 @@ $pages = array(
 ),
 
 );
+
+require_once $cfg->path->app . 'lib/iceget.lib.php';
+$iceget = new Iceget();
+$iceget->SetUrl( $cfg->radio->server . $cfg->radio->stats );
+$stats = $iceget->GetStats( (string) $cfg->radio->mount );
+
+?>

@@ -118,12 +118,20 @@ if ( !defined( '_RUDWEB' ) )
 				$("#jplayer_loading").show();
 				return false;
 			});
-			
-			/* ajax navigation - load homepage as default */
-			//$.loadContent( '<?php echo $cfg->app->index; ?>' );
 
-			/* ajax - update radio status */
-			//$.updateStatus();
+			<?php
+			switch ( $page )
+			{
+				case 'stats' :
+			?>
+				
+			<?php
+					break;
+				default :
+					break;
+			}
+			?>
+			
 		});
 		//]]>
 		</script>
