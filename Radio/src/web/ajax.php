@@ -26,13 +26,6 @@ define( '_RUDWEB', TRUE );
 require_once './cfg.inc.php';
 
 /**
- * Set ajax flag.
- *
- * @var bool
- */
-$ajax = TRUE;
-
-/**
  * Work only with post requests.
  */
 if ( isset( $_POST['request'] ) )
@@ -48,20 +41,20 @@ if ( isset( $_POST['request'] ) )
 				exit();
 			}
 			break;
-				
+
 		case 'iceget' :
 			$iceget_types = array( 'small', 'full' );
-			
+
 			if ( isset( $_POST['type'] ) )
 			{
 				$type = ( in_array( $_POST['type'], $iceget_types ) ) ? $_POST['type'] : 'full';
 
-				$f = 'iceget_'.$type;
+				$f = 'show_stats_'.$type;
 
-				require $cfg->path->app . 'lib/iceget.lib.php';
+				require_once $cfg->path->app . 'lib/iceget.lib.php';
 				$iceget = new Iceget();
-				$iceget->SetUrl( 'http://radio.rudisoft.net:1984/stats.xsl' );
-				$stats = $iceget->GetStats( '/stream' );
+				$iceget->SetUrl( $cfg->radio->server . $cfg->radio->stats );
+				$stats = $iceget->GetStats( (string) $cfg->radio->mount );
 
 				return $f( $stats );
 			}
@@ -74,34 +67,6 @@ if ( isset( $_POST['request'] ) )
 }
 
 echo 0;
-
-function iceget_small( $stats )
-{
-	$onair = ( 'on' == $stats['onair'] ) ? 'broadcasting' : 'not broadcasting';
-	$out = '
-	server status: <span class="' . $stats['onair'] . '">' . $onair . '</span>
-	<h5>now playing:</h5><span class="song">' . $stats['title'] . '</span>
-	';
-	echo $out;
-}
-
-function iceget_full( $stats )
-{
-	$onair = ( 'on' == $stats['onair'] ) ? 'broadcasting' : 'not broadcasting';
-	$out = '
-	<li><span class="red">station status:</span> <span class="' . $stats['onair'] . '">' . $onair . '</span></li>
-	<li><span class="red">last initialization:</span> ' . $stats['since'] . '</li>
-	<li><span class="red">station name:</span> ' . $stats['name'] . '</li>
-	<li><span class="red">station description:</span> ' . $stats['description'] . '</li>
-	<li><span class="red">station genre:</span> ' . $stats['genre'] . '</li>
-	<li><span class="red">stream type:</span> ' . $stats['type'] . '</li>
-	<li><span class="red">stream quality:</span> ' . $stats['bitrate'] . '</li>
-	<li><span class="red">current listeners:</span> ' . $stats['listeners'] . '</li>
-	<li><span class="red">most listeners:</span> ' . $stats['peak'] . '</li>
-	<li><span class="red">now playing:</span> ' . $stats['title'] . '</li>
-	';
-	echo $out;
-}
 
 exit;
 ?>

@@ -120,10 +120,10 @@ if ( !defined( '_RUDWEB' ) )
 			});
 			
 			/* ajax navigation - load homepage as default */
-			$.loadContent( '<?php echo $cfg->app->index; ?>' );
+			//$.loadContent( '<?php echo $cfg->app->index; ?>' );
 
 			/* ajax - update radio status */
-			$.updateStatus();
+			//$.updateStatus();
 		});
 		//]]>
 		</script>

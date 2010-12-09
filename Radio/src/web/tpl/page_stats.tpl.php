@@ -23,26 +23,20 @@ if ( !defined( '_RUDWEB' ) )
 								<h2>Live stats</h2>
 								
 								<p>
-									<a class="radio_stats_refresh" href="<?php echo $cfg->url->app; ?>/?page=stats">click to refresh status</a>
+									<a class="radio_stats_refresh" href="<?php echo $cfg->url->app; ?>?page=stats">click to refresh status</a>
 								</p>
 								
 								<ul id="radio_stats">
-									<li><span class="red">station status:</span> n/a</li>
-									<li><span class="red">last initialization:</span> n/a</li>
-									<li><span class="red">station name:</span> n/a</li>
-									<li><span class="red">station description:</span> n/a</li>
-									<li><span class="red">station genre:</span> n/a</li>
-									<li><span class="red">stream type:</span> n/a</li>
-									<li><span class="red">stream quality:</span> n/a</li>
-									<li><span class="red">current listeners:</span> n/a</li>
-									<li><span class="red">most listeners:</span> n/a</li>
-									<li><span class="red">now playing:</span> n/a</li>
+									<?php echo show_stats_full( $stats ); ?>
 								</ul>
 								<script type="text/javascript">	
 								//<![CDATA[
 		
+								/*
 								$(document).ready(function() {
 									$.updateFullStatus();
 								});
+								*/
+								
 								//]]>
 								</script>

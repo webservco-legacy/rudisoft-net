@@ -26,11 +26,6 @@ define( '_RUDWEB', TRUE );
 require_once './cfg.inc.php';
 
 /**
- * Load application.
- */
-require_once $cfg->path->app . 'app.inc.php';
-
-/**
  * Load controller.
  */
 require_once $cfg->path->app . 'ctrl.inc.php';

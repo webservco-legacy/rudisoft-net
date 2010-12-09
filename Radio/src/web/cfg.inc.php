@@ -59,6 +59,11 @@ else
 }
 
 /**
+ * Load application library.
+ */
+require_once $cfg->path->app . 'lib/app.lib.php';
+
+/**
  * List of all pages.
  *
  * @var array
@@ -69,31 +74,24 @@ $pages = array(
 		'name' => 'Home',
 		'url' => (string) $cfg->url->app . '?page=' . (string) $cfg->app->index,
 		'class' => 'page_home',
-	),
+),
 	'programmes' => array(
 		'menu' => TRUE,
 		'name' => 'Programmes',
 		'url' => (string) $cfg->url->app . '?page=programmes',
 		'class' => 'page_programmes',
-	),
+),
 	'stats' => array(
 		'menu' => TRUE,
 		'name' => 'Live Stats',
 		'url' => (string) $cfg->url->app . '?page=stats',
 		'class' => 'page_stats',
-	),
+),
 	'404' => array(
 		'menu' => FALSE,
 		'name' => '404 Not Found',
 		'url' => (string) $cfg->url->app . '?page=404',
 		'class' => 'page_404',
-	),
-	
-);
+),
 
-/**
- * Set ajax flag.
- *
- * @var bool
- */
-$ajax = FALSE;
+);

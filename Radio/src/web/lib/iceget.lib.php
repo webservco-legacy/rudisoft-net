@@ -34,6 +34,13 @@ class Iceget
 
 	private $_mStats = NULL;
 
+	/**
+	 * Get statistics.
+	 *
+	 * @param string $station
+	 *
+	 * @return array
+	 */
 	public function GetStats( $station )
 	{
 		if ( !$this->_mStats )
@@ -47,11 +54,25 @@ class Iceget
 		return $this->_mStats[$station];
 	}
 
+	/**
+	 * Set server URL.
+	 *
+	 * @param stringe $url
+	 *
+	 * @return bool
+	 */
 	public function SetUrl( $url )
 	{
 		$this->_mUrl = $url;
+
+		return TRUE;
 	}
 
+	/**
+	 * Fetch statistics from server.
+	 *
+	 * @return bool
+	 */
 	private function _FetchStats()
 	{
 		$handle = $this->_Wget( $this->_mUrl );
