@@ -49,7 +49,7 @@ class Iceget
 		}
 		if ( !array_key_exists( $station, $this->_mStats ) )
 		{
-			return FALSE;
+			return array( 'onair' => 'off', 'title' => 'n/a' );
 		}
 		return $this->_mStats[$station];
 	}
