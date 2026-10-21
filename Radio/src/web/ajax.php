@@ -30,35 +30,35 @@ require_once './cfg.inc.php';
  */
 if ( isset( $_POST['request'] ) )
 {
-	switch( $_POST['request'] )
-	{
-		case 'page' :
-			if ( isset( $_POST['page'] ) )
-			{
-				$page = ( array_key_exists( $_POST['page'], $pages ) ) ? $_POST['page'] : '404';
-				require $cfg->path->app . 'tpl/page_' . $page . '.tpl.php';
-				require $cfg->path->app . 'tpl/jscript.tpl.php';
-				exit();
-			}
-			break;
+    switch( $_POST['request'] )
+    {
+        case 'page' :
+            if ( isset( $_POST['page'] ) )
+            {
+                $page = ( array_key_exists( $_POST['page'], $pages ) ) ? $_POST['page'] : '404';
+                require $cfg->path->app . 'tpl/page_' . $page . '.tpl.php';
+                require $cfg->path->app . 'tpl/jscript.tpl.php';
+                exit();
+            }
+            break;
 
-		case 'iceget' :
-			$iceget_types = array( 'small', 'full' );
+        case 'iceget' :
+            $iceget_types = array( 'small', 'full' );
 
-			if ( isset( $_POST['type'] ) )
-			{
-				$type = ( in_array( $_POST['type'], $iceget_types ) ) ? $_POST['type'] : 'full';
+            if ( isset( $_POST['type'] ) )
+            {
+                $type = ( in_array( $_POST['type'], $iceget_types ) ) ? $_POST['type'] : 'full';
 
-				$f = 'show_stats_'.$type;
+                $f = 'show_stats_'.$type;
 
-				return $f( $stats );
-			}
-			break;
+                return $f( $stats );
+            }
+            break;
 
-		default:
-			echo 0;
-			break;
-	}
+        default:
+            echo 0;
+            break;
+    }
 }
 
 echo 0;

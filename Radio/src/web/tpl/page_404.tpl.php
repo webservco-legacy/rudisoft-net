@@ -14,11 +14,11 @@
  */
 if ( !defined( '_RUDWEB' ) )
 {
-	/**
-	 * Stop script execution.
-	 */
-	exit;
+    /**
+     * Stop script execution.
+     */
+    exit;
 }
 ?>
-								<h2>Four Oh Four!</h2>
-								<p>We are terribly sorry, but Santa's little helpers couldn't find whatever it is you were looking for...</p>
+                                <h2>Four Oh Four!</h2>
+                                <p>We are terribly sorry, but Santa's little helpers couldn't find whatever it is you were looking for...</p>

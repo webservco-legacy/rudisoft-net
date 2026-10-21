@@ -14,29 +14,29 @@
  */
 if ( !defined( '_RUDWEB' ) )
 {
-	/**
-	 * Stop script execution.
-	 */
-	exit;
+    /**
+     * Stop script execution.
+     */
+    exit;
 }
 ?>
-								<h2>Live stats</h2>
-								
-								<p>
-									<a class="radio_stats_refresh" href="<?php echo $cfg->url->app; ?>?page=stats">click to refresh status</a>
-								</p>
-								
-								<ul id="radio_stats">
-									<?php echo show_stats_full( $stats ); ?>
-								</ul>
-								<script type="text/javascript">	
-								//<![CDATA[
-		
-								/*
-								$(document).ready(function() {
-									$.updateFullStatus();
-								});
-								*/
-								
-								//]]>
-								</script>
+                                <h2>Live stats</h2>
+                                
+                                <p>
+                                    <a class="radio_stats_refresh" href="<?php echo $cfg->url->app; ?>?page=stats">click to refresh status</a>
+                                </p>
+                                
+                                <ul id="radio_stats">
+                                    <?php echo show_stats_full( $stats ); ?>
+                                </ul>
+                                <script type="text/javascript">	
+                                //<![CDATA[
+        
+                                /*
+                                $(document).ready(function() {
+                                    $.updateFullStatus();
+                                });
+                                */
+                                
+                                //]]>
+                                </script>

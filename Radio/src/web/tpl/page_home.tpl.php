@@ -14,19 +14,19 @@
  */
 if ( !defined( '_RUDWEB' ) )
 {
-	/**
-	 * Stop script execution.
-	 */
-	exit;
+    /**
+     * Stop script execution.
+     */
+    exit;
 }
 ?>
-								<h2>Welcome to RudiSoft Radio!</h2>
-								<p>Broadcasting non stop winter holiday tunes all December!</p>
-								<p>Current programme: <a title="Winter Wonderland" class="page_programmes" href="<?php echo $cfg->url->app; ?>?page=programmes"><strong>Winter Wonderland</strong></a></p>
-								<ul class="img-list">
-									<li>
-										<a class="new" title="Listen in your favorite player" href="<?php echo $cfg->radio->server . $cfg->radio->m3u; ?>"><img alt="Listen in your favorite player" title="Listen in your favorite player" src="./img/m3u.png" /></a>
-										<h5><a class="new" title="Listen in your favorite player" href="<?php echo $cfg->radio->server . $cfg->radio->m3u; ?>">Listen in your favorite player</a></h5>
-										Click the icon to download the radio playlist for listening in your favorite media player.
-									</li>
-								</ul>
+                                <h2>Welcome to RudiSoft Radio!</h2>
+                                <p>Broadcasting non stop winter holiday tunes all December!</p>
+                                <p>Current programme: <a title="Winter Wonderland" class="page_programmes" href="<?php echo $cfg->url->app; ?>?page=programmes"><strong>Winter Wonderland</strong></a></p>
+                                <ul class="img-list">
+                                    <li>
+                                        <a class="new" title="Listen in your favorite player" href="<?php echo $cfg->radio->server . $cfg->radio->m3u; ?>"><img alt="Listen in your favorite player" title="Listen in your favorite player" src="./img/m3u.png" /></a>
+                                        <h5><a class="new" title="Listen in your favorite player" href="<?php echo $cfg->radio->server . $cfg->radio->m3u; ?>">Listen in your favorite player</a></h5>
+                                        Click the icon to download the radio playlist for listening in your favorite media player.
+                                    </li>
+                                </ul>

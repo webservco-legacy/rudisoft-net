@@ -20,15 +20,15 @@
  */
 if ( !defined( '_RUDWEB' ) )
 {
-	/**
-	 * Stop script execution.
-	 */
-	exit;
+    /**
+     * Stop script execution.
+     */
+    exit;
 }
 
 if ( !is_readable( './etc/settings.cfg.xml' ) )
 {
-	die( 'Configuration file is missing.' );
+    die( 'Configuration file is missing.' );
 }
 
 /**
@@ -51,11 +51,11 @@ $cfg = $settings->$env;
  */
 if ( '1' == (string) $cfg->app->errors )
 {
-	error_reporting( E_ALL | E_STRICT );
+    error_reporting( E_ALL | E_STRICT );
 }
 else
 {
-	error_reporting( 0 );
+    error_reporting( 0 );
 }
 
 /**
@@ -69,29 +69,29 @@ require_once $cfg->path->app . 'lib/app.lib.php';
  * @var array
  */
 $pages = array(
-	'home' => array(
-		'menu' => TRUE,
-		'name' => 'Home',
-		'url' => (string) $cfg->url->app . '?page=' . (string) $cfg->app->index,
-		'class' => 'page_home',
+    'home' => array(
+        'menu' => TRUE,
+        'name' => 'Home',
+        'url' => (string) $cfg->url->app . '?page=' . (string) $cfg->app->index,
+        'class' => 'page_home',
 ),
-	'programmes' => array(
-		'menu' => TRUE,
-		'name' => 'Programmes',
-		'url' => (string) $cfg->url->app . '?page=programmes',
-		'class' => 'page_programmes',
+    'programmes' => array(
+        'menu' => TRUE,
+        'name' => 'Programmes',
+        'url' => (string) $cfg->url->app . '?page=programmes',
+        'class' => 'page_programmes',
 ),
-	'stats' => array(
-		'menu' => TRUE,
-		'name' => 'Live Stats',
-		'url' => (string) $cfg->url->app . '?page=stats',
-		'class' => 'page_stats',
+    'stats' => array(
+        'menu' => TRUE,
+        'name' => 'Live Stats',
+        'url' => (string) $cfg->url->app . '?page=stats',
+        'class' => 'page_stats',
 ),
-	'404' => array(
-		'menu' => FALSE,
-		'name' => '404 Not Found',
-		'url' => (string) $cfg->url->app . '?page=404',
-		'class' => 'page_404',
+    '404' => array(
+        'menu' => FALSE,
+        'name' => '404 Not Found',
+        'url' => (string) $cfg->url->app . '?page=404',
+        'class' => 'page_404',
 ),
 
 );

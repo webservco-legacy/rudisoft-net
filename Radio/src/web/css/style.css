@@ -122,16 +122,16 @@ dl dd {padding:4px 0 18px 8px}
 #contacts-form textarea {width:450px;height:297px;padding:1px 0 1px 3px;background:none;border:1px solid #c0c0c0;color:#616161;margin-bottom:10px;overflow:auto;float:left}
 
 #noscript {
-	background: #900;
-	color: #fff;
-	font-size: 1.3em;
-	font-weight: bold;
-	text-align: center;
-	padding: 20px;
-	position: fixed;
-	top: 20px;
-	width: 100%;
-	z-index: 1;
+    background: #900;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 1;
 }
 
 .on { color: #090; font-weight: bold; }

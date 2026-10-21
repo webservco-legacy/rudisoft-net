@@ -20,10 +20,10 @@
  */
 if ( !defined( '_RUDWEB' ) )
 {
-	/**
-	 * Stop script execution.
-	 */
-	exit;
+    /**
+     * Stop script execution.
+     */
+    exit;
 }
 
 /**
@@ -35,10 +35,10 @@ $page = (string) $cfg->app->index;
 
 if ( isset( $_GET['page'] ) )
 {
-	/**
-	 * @var string
-	 */
-	$page = ( array_key_exists( $_GET['page'], $pages ) ) ? $_GET['page'] : '404';
+    /**
+     * @var string
+     */
+    $page = ( array_key_exists( $_GET['page'], $pages ) ) ? $_GET['page'] : '404';
 }
 
 /**
@@ -46,10 +46,10 @@ if ( isset( $_GET['page'] ) )
  */
 if ( !is_readable( $cfg->path->app . 'tpl/page_' .  $page . '.tpl.php' ) )
 {
-	/**
-	 * @var string
-	 */
-	$page = '404';
+    /**
+     * @var string
+     */
+    $page = '404';
 }
 
 /**
@@ -58,7 +58,7 @@ if ( !is_readable( $cfg->path->app . 'tpl/page_' .  $page . '.tpl.php' ) )
  * @var array
  */
 $out = array(
-	'page_title' => $pages[$page]['name'],
+    'page_title' => $pages[$page]['name'],
 );
 
 /**
@@ -73,10 +73,10 @@ $page_mod = (string) $cfg->path->app . 'mod/' . $page . '.mod.php';
  */
 if ( is_readable( $page_mod ) )
 {
-	/**
-	 * Load page model.
-	 */
-	require_once $page_mod;
+    /**
+     * Load page model.
+     */
+    require_once $page_mod;
 }
 
 /**
