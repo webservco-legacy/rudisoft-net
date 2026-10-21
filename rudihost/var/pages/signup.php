@@ -18,7 +18,7 @@ $yourdomain = preg_replace('/^www\./' , '' , $yourdomain);
 <div id="header">
 <? include ("header.php"); ?>
 </div>
-		
+        
 
 <div id="sidebar_right">
 <?
@@ -39,7 +39,7 @@ Fill out the form below and your free hosting account will be created. <br>
 <br>
 
 <img alt="" src="images/logos.gif">		
-		
+        
 </p>
 </div>
 

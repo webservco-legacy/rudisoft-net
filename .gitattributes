@@ -1,0 +1,15 @@
+# Line endings: LF in the repository and in working copies
+* text eol=lf
+
+# Binary files: no line-ending conversion
+*.gif binary
+*.gz binary
+*.ico binary
+*.jpg binary
+*.pfx binary
+*.png binary
+*.psd binary
+*.swf binary
+*.ttf binary
+*.xcf binary
+*.zip binary
