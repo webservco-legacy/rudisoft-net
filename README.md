@@ -29,7 +29,9 @@ today.
 
 `main` from the dump of my SVN repository (revisions 1 to 34; the `git-svn-id` lines name them); the three other
 branches from copies of the sites made before it. Turned into git in 2026 (33 commits), the dates kept. The
-last commit of each branch sets LF line endings and indents with spaces. Database passwords in the configs read
+last commit of each branch sets LF line endings and indents with spaces.
+The earlier commits have LF line endings too: 410 files had CRLF line endings in the originals.
+Database passwords in the configs read
 `REDACTED`.
 
 Left out of the whole history: a web template downloaded for the radio page (a zip), two web fonts converted for Cufón
