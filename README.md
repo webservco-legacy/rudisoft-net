@@ -28,8 +28,9 @@ today.
 ## How it was built
 
 `main` from the dump of my SVN repository (revisions 1 to 34; the `git-svn-id` lines name them); the three other
-branches from copies of the sites made before it. Turned into git in 2026 (33 commits), the dates kept. The
-last commit of each branch sets LF line endings and indents with spaces.
+branches from copies of the sites made before it. Turned into git in 2026 (42 commits on all branches), the dates kept.
+The last commit of each branch sets LF line endings and indents with spaces (not in `rudihost/lib/editor/` on
+`rudihost-2008-09` and `web/rwlib/3rdparty/Smarty/Smarty.class.php` on `rudweb2-site-2009`).
 The earlier commits have LF line endings too: 410 files had CRLF line endings in the originals.
 Database passwords in the configs read
 `REDACTED`.
